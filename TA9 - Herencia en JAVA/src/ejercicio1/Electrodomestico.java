@@ -5,12 +5,12 @@ public class Electrodomestico {
 	// Atributos de la clase
 	private double precioBase;
 	private String color;
-	private String consumoEnergetico;
+	private char consumoEnergetico;
 	private double peso;
 
 	// Constantes para el constructor por defecto
 	private final String colorDefault = "blanco";
-	private final String consumoEnergeticoDefault = "F";
+	private final char consumoEnergeticoDefault = 'F';
 	private final double precioBaseDefault = 100.0;
 	private final double pesoDefault = 5.0;
 
@@ -31,10 +31,10 @@ public class Electrodomestico {
 	}
 
 	// Constructor con todos los atributos
-	public Electrodomestico(double precioBase, String color, String consumoEnergetico, double peso) {
+	public Electrodomestico(double precioBase, String color, char consumoEnergetico, double peso) {
 		this.precioBase = precioBase;
 		this.color = elegirColorElectrodomestico(color);
-		this.consumoEnergetico = elegirConsumoElectrodomestico(consumoEnergetico);
+		this.consumoEnergetico = comprobarConsumoEnergetico(consumoEnergetico);
 		this.peso = peso;
 	}
 
@@ -71,31 +71,31 @@ public class Electrodomestico {
 
 	// Método que recibe un consumo eléctrico por parámetro, lo comprueba en un
 	// switch y devuelve una string con el consumo eléctrico disponible
-	public String elegirConsumoElectrodomestico(String consumoElectrico) {
+	public char comprobarConsumoEnergetico(char letra) {
 
-		String consumo;
+		char consumo;
 
-		switch (consumoElectrico) {
-		case "A":
-			consumo = "A";
+		switch (letra) {
+		case 'A':
+			consumo = 'A';
 			break;
-		case "B":
-			consumo = "B";
+		case 'B':
+			consumo = 'B';
 			break;
-		case "C":
-			consumo = "C";
+		case 'C':
+			consumo = 'C';
 			break;
-		case "D":
-			consumo = "D";
+		case 'D':
+			consumo = 'D';
 			break;
-		case "E":
-			consumo = "E";
+		case 'E':
+			consumo = 'E';
 			break;
-		case "F":
-			consumo = "F";
+		case 'F':
+			consumo = 'F';
 			break;
 		default:
-			consumo = "F"; // El consumo por defecto será F
+			consumo = 'F'; // El consumo por defecto será F
 			break;
 		}
 
@@ -120,11 +120,11 @@ public class Electrodomestico {
 		this.color = color;
 	}
 
-	public String getConsumoEnergetico() {
+	public char getConsumoEnergetico() {
 		return consumoEnergetico;
 	}
 
-	public void setConsumoEnergetico(String consumoEnergetico) {
+	public void setConsumoEnergetico(char consumoEnergetico) {
 		this.consumoEnergetico = consumoEnergetico;
 	}
 
