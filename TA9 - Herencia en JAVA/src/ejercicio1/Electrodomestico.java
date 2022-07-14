@@ -3,16 +3,16 @@ package ejercicio1;
 public class Electrodomestico {
 
 	// Atributos de la clase
-	protected double precioBase;
-	protected String color;
-	protected char consumoEnergetico;
-	protected double peso;
+	private double precioBase;
+	private String color;
+	private char consumoEnergetico;
+	private double peso;
 
 	// Constantes para el constructor por defecto
-	protected final String colorDefault = "blanco";
-	protected final char consumoEnergeticoDefault = 'F';
-	protected final double precioBaseDefault = 100.0;
-	protected final double pesoDefault = 5.0;
+	private final String colorDefault = "blanco";
+	private final char consumoEnergeticoDefault = 'F';
+	private final double precioBaseDefault = 100.0;
+	private final double pesoDefault = 5.0;
 
 	// Constructor de la clase por defecto
 	public Electrodomestico() {
@@ -33,18 +33,18 @@ public class Electrodomestico {
 	// Constructor con todos los atributos
 	public Electrodomestico(double precioBase, String color, char consumoEnergetico, double peso) {
 		this.precioBase = precioBase;
-		this.color = comprobarColor(color);
+		this.color = elegirColorElectrodomestico(color);
 		this.consumoEnergetico = comprobarConsumoEnergetico(consumoEnergetico);
 		this.peso = peso;
 	}
 
 	// Método que recibe un color por parámetro, lo comprueba en un switch y
 	// devuelve una string con el color disponible
-	public String comprobarColor(String color) {
+	public String elegirColorElectrodomestico(String colorElectrodomestico) {
 
 		String colorFinal;
 
-		switch (color) {
+		switch (colorElectrodomestico) {
 		case "blanco":
 			colorFinal = "blanco";
 			break;
@@ -125,6 +125,7 @@ public class Electrodomestico {
 	}
 
 	public void setConsumoEnergetico(char consumoEnergetico) {
+		//prueba
 		this.consumoEnergetico = consumoEnergetico;
 	}
 
