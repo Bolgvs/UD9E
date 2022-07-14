@@ -42,8 +42,6 @@ public class Electrodomestico {
 	// devuelve una string con el color disponible
 	public String comprobarColor(String color) {
 
-		String colorFinal;
-
 		String colorFinal = color;
 		
 		if (color.equalsIgnoreCase("blanco") || color.equalsIgnoreCase("negro") ||color.equalsIgnoreCase("rojo")
