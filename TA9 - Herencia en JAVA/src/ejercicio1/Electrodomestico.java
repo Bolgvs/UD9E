@@ -3,16 +3,16 @@ package ejercicio1;
 public class Electrodomestico {
 
 	// Atributos de la clase
-	private double precioBase;
-	private String color;
-	private char consumoEnergetico;
-	private double peso;
+	protected double precioBase;
+	protected String color;
+	protected char consumoEnergetico;
+	protected double peso;
 
 	// Constantes para el constructor por defecto
-	private final String colorDefault = "blanco";
-	private final char consumoEnergeticoDefault = 'F';
-	private final double precioBaseDefault = 100.0;
-	private final double pesoDefault = 5.0;
+	protected final String colorDefault = "blanco";
+	protected final char consumoEnergeticoDefault = 'F';
+	protected final double precioBaseDefault = 100.0;
+	protected final double pesoDefault = 5.0;
 
 	// Constructor de la clase por defecto
 	public Electrodomestico() {
