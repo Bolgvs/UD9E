@@ -95,7 +95,7 @@ public class Electrodomestico {
 			consumo = 'F';
 			break;
 		default:
-			consumo = 'F'; // El consumo por defecto será F
+			consumo = 'F'; // El consumo por defecto será F.
 			break;
 		}
 
