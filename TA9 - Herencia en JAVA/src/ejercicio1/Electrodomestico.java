@@ -44,27 +44,13 @@ public class Electrodomestico {
 
 		String colorFinal;
 
-		switch (color) {
-		case "blanco":
-			colorFinal = "blanco";
-			break;
-		case "negro":
-			colorFinal = "negro";
-			break;
-		case "rojo":
-			colorFinal = "rojo";
-			break;
-		case "azul":
-			colorFinal = "azul";
-			break;
-		case "gris":
-			colorFinal = "gris";
-			break;
-		default:
-			colorFinal = "blanco"; // El color por defecto será el blanco
-			break;
+		String colorFinal = color;
+		
+		if (color.equalsIgnoreCase("blanco") || color.equalsIgnoreCase("negro") ||color.equalsIgnoreCase("rojo")
+				|| color.equalsIgnoreCase("azul") || color.equalsIgnoreCase("gris")) {
+			colorFinal = color;
 		}
-
+		
 		return colorFinal;
 
 	}
