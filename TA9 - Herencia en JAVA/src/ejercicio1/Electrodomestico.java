@@ -33,18 +33,18 @@ public class Electrodomestico {
 	// Constructor con todos los atributos
 	public Electrodomestico(double precioBase, String color, char consumoEnergetico, double peso) {
 		this.precioBase = precioBase;
-		this.color = elegirColorElectrodomestico(color);
+		this.color = comprobarColor(color);
 		this.consumoEnergetico = comprobarConsumoEnergetico(consumoEnergetico);
 		this.peso = peso;
 	}
 
 	// Método que recibe un color por parámetro, lo comprueba en un switch y
 	// devuelve una string con el color disponible
-	public String elegirColorElectrodomestico(String colorElectrodomestico) {
+	public String comprobarColor(String color) {
 
 		String colorFinal;
 
-		switch (colorElectrodomestico) {
+		switch (color) {
 		case "blanco":
 			colorFinal = "blanco";
 			break;
